@@ -36,10 +36,10 @@ public class Food {
     //Проверяю овощи + помидоры или нет
     public String tomatos() {
         if ((type == "овощи") && (name == "помидоры")) {
-            String tomatos = "Хорошие помидоры ";
+            String tomatos = "Хорошие помидоры";
             return tomatos;
         } else {
-            String tomatos = "Сейчас я ищу помидоры.";
+            String tomatos = "Не помидоры, но и это подойдет.";
             return tomatos;
         }
     }
@@ -48,10 +48,10 @@ public class Food {
     //Проверка на спелость
     public String tasty() {
         if (ripe == true) {
-            String tasty = "Люблю спелые овощи.";
+            String tasty = "";
             return tasty;
         } else {
-            String tasty = "Но нужно подождать пока они дозреют.";
+            String tasty = "Нужно подождать пока они дозреют.";
             return tasty;
         }
     }
@@ -60,7 +60,7 @@ public class Food {
     //Проверяю подходит ли цена
     public String money() {
         if (cost >= 15) {
-            String money = "но, будем ждать пока подешевеет.";
+            String money = "Цена немного кусается.";
             return money;
         } else if (cost >= 5 && cost <= 14) {
             String money = "и цена подходит.";
@@ -92,5 +92,8 @@ public class Food {
         }
     }
 
+    public void toInformation() {
+        System.out.println("Тип продукта: " + type + ". Название: " + name + ". Стоимость: " + cost + ". Вес: " + weight + ". Спелость: " + ripe);
+    }
 
 }
